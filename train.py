@@ -20,7 +20,7 @@ parser.add_argument('--learning_rate', type=float, default=0.0002,
                     help='learning rate')
 parser.add_argument('--seed', type=int, default=1,
                     help='random seed (default: 1)')
-parser.add_argument('--amp', action='store_true', default=False,
+parser.add_argument('--amp', action='store_true', default=True,
                     help='Enables automatic mixed precision')
 
 # parameters for model and training objective
@@ -37,7 +37,7 @@ parser.add_argument('--n_depth', type=int, default=3)
 parser.add_argument('--use_bn', type=int, default=0)
 
 # parameters for output, logging, checkpointing, etc
-parser.add_argument('--output_dir', type=str, default='./runs',
+parser.add_argument('--output_dir', type=str, default='/kaggle/input/flowers-dataset/runs',
                     help='directory where tensorboard events and checkpoints will be stored')
 parser.add_argument('--input_dir', type=str, default='/mnt/imagenet',
                     help="Input directory for the dataset. Not needed For C10,"
