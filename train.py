@@ -14,8 +14,8 @@ from task_classifiers import train_classifiers
 parser = argparse.ArgumentParser(description='Infomax Representations - Training Script')
 # parameters for general training stuff
 parser.add_argument('--dataset', type=str, default='STL10')
-parser.add_argument('--batch_size', type=int, default=200,
-                    help='input batch size (default: 200)')
+parser.add_argument('--batch_size', type=int, default=16,
+                    help='input batch size (default: 16)')
 parser.add_argument('--learning_rate', type=float, default=0.0002,
                     help='learning rate')
 parser.add_argument('--seed', type=int, default=1,
